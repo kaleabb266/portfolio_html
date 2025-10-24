@@ -303,12 +303,20 @@
                 <a href={portfolioData.profile.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-gray-700 text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-600 transition-colors duration-300 shadow-md" aria-label="Visit my GitHub">
                   <GithubIcon /> GitHub
                 </a>
-                {/* LinkedIn Link - Disabled with Tooltip */}
-                <div className="tooltip">
-                  <span className="inline-flex items-center bg-gray-300 text-gray-600 px-6 py-3 rounded-md font-semibold cursor-not-allowed shadow-md" title="LinkedIn profile not public yet">
-                    <LinkedinIcon /> LinkedIn
+                {/* LinkedIn now active */}
+                <div className="relative group">
+                  <a
+                    href={portfolioData.profile.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-200 hover:text-primary transition-all duration-300 transform hover:scale-110"
+                    aria-label="Visit my LinkedIn"
+                  >
+                    <LinkedinIcon />
+                  </a>
+                  <span className="absolute bottom-full mb-2 hidden group-hover:block bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-lg shadow-lg">
+                    View my LinkedIn
                   </span>
-                  <span className="tooltiptext">Not publicly available yet</span>
                 </div>
               </div>
             </div>
